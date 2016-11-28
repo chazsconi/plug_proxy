@@ -32,7 +32,7 @@ forward "/blog", BlogController, :index
 ### Add a controller
 
 Configure the proxy with the URL (should match the routes), and where the files are on the file system.
-
+N.B. Do not put `use MyApp.Web, :controller` as this will cause a circular dependency.
 ```elixir
 defmodule MyApp.BlogController do
   use Phoenix.Controller
